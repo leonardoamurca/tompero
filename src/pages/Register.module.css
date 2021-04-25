@@ -1,0 +1,29 @@
+.Container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+}
+
+.LogoContainer {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.FormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  width: 270px;
+  height: 570px;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 30px;
+}
