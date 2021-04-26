@@ -2,14 +2,12 @@
 import Register from "./pages/Register";
 import { Button } from "@material-ui/core";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Header>
-        <Button color="secondary">Registrar</Button>
-        <Button color="secondary">Entrar</Button>
-      </Header>
+      <Footer />
     </div>
   );
 }

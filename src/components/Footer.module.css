@@ -1,0 +1,29 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  background-color: #000000;
+  width: 100%;
+  height: 300px;
+}
+
+.AuthorsContainer {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  width: 900px;
+  border-top-style: solid;
+  border-top-color: white;
+  border-top-width: thin;
+  color: white;
+}
+
+.Authors {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
