@@ -1,0 +1,56 @@
+.Container {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.62), 0 1px 2px rgba(0, 0, 0, 0.44);
+  padding: 20px;
+}
+.Avatar {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.Name {
+  font-size: 35px;
+  margin: 0;
+}
+
+.RegisterDate {
+  font-size: 15px;
+}
+
+.Email {
+  font-size: 25px;
+  margin: 0;
+}
+
+.RecipesNumber {
+  font-size: 35px;
+}
+.Email {
+  font-size: 25px;
+  margin: 0;
+}
+
+.RecipesNumber {
+  font-size: 35px;
+}
+.Email {
+  font-size: 25px;
+  margin: 0;
+}
+
+.RecipesNumber {
+  font-size: 35px;
+}
+.Email {
+  font-size: 25px;
+  margin: 0;
+}
+
+.RecipesNumber {
+  font-size: 35px;
+}

@@ -5,7 +5,8 @@ import { Button } from "@material-ui/core";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import RecipeCard from "./components/RecipeCard";
-import { recipes } from "./mocks/recipes";
+import Profile from "./components/ProfileCard";
+import { user } from './mocks/user'
 
 function App() {
   return (
@@ -14,23 +15,13 @@ function App() {
         <Button color="secondary">Registrar</Button>
         <Button color="secondary">Entrar</Button>
       </Header>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          flexWrap: "wrap",
-          paddingLeft: "100px",
-          paddingRight: "100px",
-        }}
-      >
-        {recipes.map((recipe) => (
-          <RecipeCard
-            title={recipe.title}
-            description={recipe.description}
-            picture={recipe.picture}
-          />
-        ))}
-      </div>
+      <Profile
+        avatar={user.avatar}
+        name={user.name}
+        email={user.email}
+        registerDate={user.registerDate}
+        totalRecipes={user.totalRecipes}
+      />
       <Footer />
     </div>
   );
