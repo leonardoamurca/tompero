@@ -1,0 +1,33 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 200px;
+}
+
+.Author {
+  font-size: 15px;
+  margin: 0;
+}
+
+.Ingredients {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 200px;
+}
+
+.Directions {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 200px;
+}

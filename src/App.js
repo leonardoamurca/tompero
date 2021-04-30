@@ -6,7 +6,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import RecipeCard from "./components/RecipeCard";
 import Profile from "./components/ProfileCard";
-import { user } from './mocks/user'
+import Recipe from "./pages/Recipe";
+import { user } from "./mocks/user";
 
 function App() {
   return (
@@ -15,13 +16,7 @@ function App() {
         <Button color="secondary">Registrar</Button>
         <Button color="secondary">Entrar</Button>
       </Header>
-      <Profile
-        avatar={user.avatar}
-        name={user.name}
-        email={user.email}
-        registerDate={user.registerDate}
-        totalRecipes={user.totalRecipes}
-      />
+      <Recipe />
       <Footer />
     </div>
   );
