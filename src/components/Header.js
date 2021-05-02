@@ -1,17 +1,14 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import styles from "./Header.module.css";
 
 const Header = ({ children }) => {
   return (
     <div className={styles.Container}>
-      <div
-        className={styles.LogoContainer}
-        onClick={() => console.log("Go to home page")}
-      >
+      <NavLink to="/">
         <Logo type="horizontal" />
-      </div>
+      </NavLink>
       <div>{children}</div>
     </div>
   );

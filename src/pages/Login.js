@@ -1,14 +1,26 @@
 import React, { useState } from "react";
+import { useAuth } from "../context/auth";
+import useAsync from "../hooks/useAsync";
 import { Input, Button } from "@material-ui/core";
 import styles from "./Login.module.css";
 
 import Logo from "../components/Logo";
 
 function Login() {
+  const { isLoading, isError, error, run } = useAsync();
+  const { login } = useAuth();
   const [data, setData] = useState({
     email: "",
     password: "",
   });
+
+  const isSubmitable = data.email && data.password;
+
+  const onTryLogin = () => {
+    if (isSubmitable) {
+      run(login(data));
+    }
+  };
 
   const onChangeField = (event) => {
     const { name, value } = event.target;
@@ -39,9 +51,11 @@ function Login() {
           onChange={onChangeField}
           fullWidth
         />
-        <Button variant="contained" color="primary" size="large" fullWidth>
+        <Button onClick={onTryLogin} variant="contained" color="primary" size="large" fullWidth>
           Entrar
         </Button>
+      {isLoading ? <p>Loading...</p>: null}
+      {isError ? <p>{error.message}</p> : null}
       </form>
     </div>
   );

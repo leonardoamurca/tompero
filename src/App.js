@@ -1,24 +1,16 @@
-// import Login from "./pages/Login";
-import Register from "./pages/Register";
+import React, { lazy, Suspense } from "react";
+import { useAuth } from "./context/auth";
 
-import { Button } from "@material-ui/core";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import RecipeCard from "./components/RecipeCard";
-import Profile from "./components/ProfileCard";
-import Recipe from "./pages/Recipe";
-import { user } from "./mocks/user";
+const AuthenticatedApp = lazy(() => import("./AuthenticatedApp"));
+const UnauthenticatedApp = lazy(() => import("./UnauthenticatedApp"));
 
 function App() {
+  const { isLoggedIn } = useAuth();
+
   return (
-    <div>
-      <Header>
-        <Button color="secondary">Registrar</Button>
-        <Button color="secondary">Entrar</Button>
-      </Header>
-      <Recipe />
-      <Footer />
-    </div>
+    <Suspense fallback={<h1>Loading</h1>}>
+      {isLoggedIn() ? <AuthenticatedApp /> : <UnauthenticatedApp />}
+    </Suspense>
   );
 }
 

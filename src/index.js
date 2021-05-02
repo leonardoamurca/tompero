@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import ApplicationProvider from "./context";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
@@ -24,7 +25,9 @@ const theme = createMuiTheme({
 ReactDOM.render(
   <React.StrictMode>
     <MuiThemeProvider theme={theme}>
-      <App />
+      <ApplicationProvider>
+        <App />
+      </ApplicationProvider>
     </MuiThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
