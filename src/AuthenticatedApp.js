@@ -12,6 +12,7 @@ import { Button } from "@material-ui/core";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import MyRecipes from "./pages/MyRecipes";
+import NewRecipe from "./pages/NewRecipe";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -41,6 +42,7 @@ function AuthenticatedApp() {
         <Route exact path="/" component={Home} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/recipes" component={MyRecipes} />
+        <Route exact path="/new-recipe" component={NewRecipe} />
         <Route exact path="/login">
           <Redirect to="/" />
         </Route>
