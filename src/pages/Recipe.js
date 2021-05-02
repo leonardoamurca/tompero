@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Recipe.module.css";
 import { recipes } from "../mocks/recipes";
 
