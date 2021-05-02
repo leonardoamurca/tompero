@@ -10,7 +10,7 @@ import { useAuth } from "./context/auth";
 import { Button } from "@material-ui/core";
 
 import Home from "./pages/Home";
-import Register from "./pages/Register";
+import Profile from "./pages/Profile";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -20,10 +20,16 @@ function AuthenticatedApp() {
   return (
     <Router>
       <Header>
-        <NavLink to="/recipes">
+        <NavLink
+          style={{ textDecoration: "none", color: "white" }}
+          to="/recipes"
+        >
           <Button color="secondary">Minhas Receitas</Button>
         </NavLink>
-        <NavLink to="/profile">
+        <NavLink
+          style={{ textDecoration: "none", color: "white" }}
+          to="/profile"
+        >
           <Button color="secondary">Meu Perfil</Button>
         </NavLink>
         <Button color="secondary" onClick={logout}>
@@ -32,7 +38,7 @@ function AuthenticatedApp() {
       </Header>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/profile" component={Register} />
+        <Route exact path="/profile" component={Profile} />
         <Route exact path="/login">
           <Redirect to="/" />
         </Route>
