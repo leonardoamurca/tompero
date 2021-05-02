@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { useAuth } from "./context/auth";
+import Loading from "./components/Loading";
 
 const AuthenticatedApp = lazy(() => import("./AuthenticatedApp"));
 const UnauthenticatedApp = lazy(() => import("./UnauthenticatedApp"));
@@ -8,7 +9,7 @@ function App() {
   const { isLoggedIn } = useAuth();
 
   return (
-    <Suspense fallback={<h1>Loading</h1>}>
+    <Suspense fallback={<Loading />}>
       {isLoggedIn() ? <AuthenticatedApp /> : <UnauthenticatedApp />}
     </Suspense>
   );

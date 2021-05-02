@@ -4,19 +4,18 @@ import { Button } from "@material-ui/core";
 import styles from "./MyRecipes.module.css";
 import { recipes } from "../mocks/recipes";
 import RecipeCard from "../components/RecipeCard";
+import FloatingActionButton from "../components/FloatingActionButton";
 
 function MyRecipes() {
   return (
     <div className={styles.Container}>
       <h1>Minhas Receitas</h1>
-      <Button variant="contained" color="primary" size="large">
-        <NavLink
-          style={{ textDecoration: "none", color: "white" }}
-          to="/new-recipe"
-        >
-          Nova Receita
-        </NavLink>
-      </Button>
+      <NavLink
+        style={{ textDecoration: "none", color: "white" }}
+        to="/new-recipe"
+      >
+        <FloatingActionButton>Criar Receita</FloatingActionButton>
+      </NavLink>
       <div
         style={{
           display: "flex",
@@ -27,10 +26,7 @@ function MyRecipes() {
         }}
       >
         {recipes.map((recipe) => (
-          <RecipeCard
-            key={recipe.id}
-            recipe={recipe}
-          />
+          <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
       </div>
     </div>

@@ -13,6 +13,7 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     marginTop: 25,
+    height: 333,
   },
   media: {
     height: 140,
@@ -23,7 +24,7 @@ const RecipeCard = ({ recipe }) => {
   const classes = useStyles();
 
   return (
-    <NavLink style={{ textDecoration: "none" }} to="/recipe/0">
+    <NavLink style={{ textDecoration: "none" }} to={`/recipe/${recipe.id}`}>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia

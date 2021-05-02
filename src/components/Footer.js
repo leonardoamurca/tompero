@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import Logo from "./Logo";
+
 import nikolas from "../assets/nikolas.png";
 import leonardo from "../assets/leonardo.png";
 import jonathan from "../assets/jonathan.png";

@@ -36,7 +36,7 @@ function NewRecipe() {
           multiline
           value={data.ingredients}
           onChange={onChangeField}
-          rows={4}
+          rows={10}
           variant="outlined"
           fullWidth
         />
@@ -47,13 +47,13 @@ function NewRecipe() {
           name="directions"
           value={data.directions}
           onChange={onChangeField}
-          rows={4}
+          rows={10}
           variant="outlined"
           fullWidth
         />
         <div className={styles.ButtonContainer}>
           <Button
-            style={{ marginRight: "25px", color: 'black' }}
+            style={{ marginRight: "25px", color: "black" }}
             onClick={() => console.log("Ola mundo")}
             variant="contained"
             color="secondary"

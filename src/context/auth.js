@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useCallback } from "react";
+import Loading from "../components/Loading";
 import mockRequest from "../mocks/mockRequests";
 import useAsync from "../hooks/useAsync";
 import * as auth from "../auth-provider.js";
@@ -56,7 +57,7 @@ function AuthProvider({ children }) {
   );
 
   if (isLoading || isIdle) {
-    return <h1>Loading...</h1>;
+    return <Loading />;
   }
 
   if (isError) {

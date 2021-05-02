@@ -7,11 +7,16 @@
   width: 100%;
 }
 
+
+.ContentContainer {
+  width: 100%;
+}
+
 .Header {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-left: 200px;
+  margin-left: 100px;
+  margin-right: 50px;
 }
 
 .Author {
@@ -23,14 +28,14 @@
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-left: 200px;
+  margin-left: 100px;
+  margin-right: 50px;
 }
 
 .Directions {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-left: 200px;
+  margin-left: 100px;
+  margin-right: 50px;
 }

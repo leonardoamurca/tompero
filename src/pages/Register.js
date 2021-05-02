@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Input, Button, TextField } from "@material-ui/core";
-import Logo from "../components/Logo";
 import styles from "./Register.module.css";
 
 function Register() {
@@ -20,9 +19,6 @@ function Register() {
 
   return (
     <div className={styles.Container}>
-      <div className={styles.LogoContainer}>
-        <Logo type="vertical" />
-      </div>
       <form className={styles.FormContainer} noValidate autoComplete="off">
         <h1>Cadastro</h1>
         <Input

@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { useAuth } from "../context/auth";
 import useAsync from "../hooks/useAsync";
 import { Input, Button } from "@material-ui/core";
+import Loading from "../components/Loading";
 import styles from "./Login.module.css";
-
-import Logo from "../components/Logo";
 
 function Login() {
   const { isLoading, isError, error, run } = useAsync();
@@ -30,9 +29,6 @@ function Login() {
 
   return (
     <div className={styles.Container}>
-      <div className={styles.LogoContainer}>
-        <Logo type="vertical" />
-      </div>
       <form className={styles.FormContainer} noValidate autoComplete="off">
         <h1>Entrar</h1>
         <Input
@@ -51,11 +47,17 @@ function Login() {
           onChange={onChangeField}
           fullWidth
         />
-        <Button onClick={onTryLogin} variant="contained" color="primary" size="large" fullWidth>
+        <Button
+          onClick={onTryLogin}
+          variant="contained"
+          color="primary"
+          size="large"
+          fullWidth
+        >
           Entrar
         </Button>
-      {isLoading ? <p>Loading...</p>: null}
-      {isError ? <p>{error.message}</p> : null}
+        {isLoading ? <Loading /> : null}
+        {isError ? <p>{error.message}</p> : null}
       </form>
     </div>
   );
