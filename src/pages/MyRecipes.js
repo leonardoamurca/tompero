@@ -29,9 +29,7 @@ function MyRecipes() {
         {recipes.map((recipe) => (
           <RecipeCard
             key={recipe.id}
-            title={recipe.title}
-            description={recipe.description}
-            picture={recipe.picture}
+            recipe={recipe}
           />
         ))}
       </div>

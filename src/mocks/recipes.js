@@ -1,6 +1,6 @@
 const recipes = [
   {
-    id: "_001",
+    id: "1",
     author: "Carlos Alberto de Nóbrega",
     title: "Brigadeiro",
     description:
@@ -11,7 +11,7 @@ const recipes = [
       "https://i0.statig.com.br/bancodeimagens/dx/gn/yo/dxgnyo752rcs4yt1jdz86v8rb.jpg",
   },
   {
-    id: "_002",
+    id: "2",
     author: "Rodrigo Hilbert",
     title: "Miojo",
     description:
@@ -22,7 +22,7 @@ const recipes = [
       "https://www.guiadasemana.com.br/contentFiles/system/pictures/2015/8/141685/original/brocolis-com-queijo-branco.jpg",
   },
   {
-    id: "_003",
+    id: "3",
     author: "Rodrigo Hilbert",
     title: "Miojo",
     description:
@@ -33,7 +33,7 @@ const recipes = [
       "https://www.guiadasemana.com.br/contentFiles/system/pictures/2015/8/141685/original/brocolis-com-queijo-branco.jpg",
   },
   {
-    id: "_004",
+    id: "4",
     author: "Rodrigo Hilbert",
     title: "Miojo",
     description:
@@ -44,7 +44,7 @@ const recipes = [
       "https://www.guiadasemana.com.br/contentFiles/system/pictures/2015/8/141685/original/brocolis-com-queijo-branco.jpg",
   },
   {
-    id: "_005",
+    id: "5",
     author: "Rodrigo Hilbert",
     title: "Miojo",
     description:
@@ -55,7 +55,7 @@ const recipes = [
       "https://www.guiadasemana.com.br/contentFiles/system/pictures/2015/8/141685/original/brocolis-com-queijo-branco.jpg",
   },
   {
-    id: "_006",
+    id: "6",
     author: "Rodrigo Hilbert",
     title: "Miojo",
     description:
@@ -66,7 +66,7 @@ const recipes = [
       "https://www.guiadasemana.com.br/contentFiles/system/pictures/2015/8/141685/original/brocolis-com-queijo-branco.jpg",
   },
   {
-    id: "_007",
+    id: "7",
     author: "Rodrigo Hilbert",
     title: "Miojo",
     description:
@@ -77,7 +77,7 @@ const recipes = [
       "https://www.guiadasemana.com.br/contentFiles/system/pictures/2015/8/141685/original/brocolis-com-queijo-branco.jpg",
   },
   {
-    id: "_008",
+    id: "8",
     author: "Rodrigo Hilbert",
     title: "Miojo",
     description:

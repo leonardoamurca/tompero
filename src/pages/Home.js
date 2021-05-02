@@ -17,12 +17,7 @@ function Home() {
         }}
       >
         {recipes.map((recipe) => (
-          <RecipeCard
-            key={recipe.id}
-            title={recipe.title}
-            description={recipe.description}
-            picture={recipe.picture}
-          />
+          <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
       </div>
     </div>

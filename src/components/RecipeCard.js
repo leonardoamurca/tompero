@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
@@ -18,23 +19,29 @@ const useStyles = makeStyles({
   },
 });
 
-const RecipeCard = ({ title, description, picture }) => {
+const RecipeCard = ({ recipe }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia className={classes.media} image={picture} title={title} />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <NavLink style={{ textDecoration: "none" }} to="/recipe/0">
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={recipe.picture}
+            title={recipe.title}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {recipe.title}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {recipe.description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </NavLink>
   );
 };
 

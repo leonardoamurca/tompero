@@ -2,21 +2,23 @@ import React, { useState } from "react";
 import styles from "./Recipe.module.css";
 import { recipes } from "../mocks/recipes";
 
-function Recipe() {
+function Recipe(props) {
+  const recipeId = props.match.params.id
+  
   return (
     <div className={styles.Container}>
-      <img src={recipes[0].picture} alt={recipes[0].title} />
+      <img src={recipes[recipeId].picture} alt={recipes[recipeId].title} />
       <div className={styles.Header}>
-        <h1>{recipes[0].title}</h1>
+        <h1>{recipes[recipeId].title}</h1>
         <p className={styles.Author}>
-          por <a href="#">{recipes[0].author}</a>
+          por <a href="#">{recipes[recipeId].author}</a>
         </p>
       </div>
 
       <div className={styles.Ingredients}>
         <h2>Ingredientes</h2>
         <ul>
-          {recipes[0].ingredients.split(";").map((ingredient) => (
+          {recipes[recipeId].ingredients.split(";").map((ingredient) => (
             <li>{ingredient}</li>
           ))}
         </ul>
@@ -24,7 +26,7 @@ function Recipe() {
       <div className={styles.Directions}>
         <h2>Modo de Preparo</h2>
         <ol>
-          {recipes[0].directions.split(";").map((direction) => (
+          {recipes[recipeId].directions.split(";").map((direction) => (
             <li>{direction}</li>
           ))}
         </ol>
