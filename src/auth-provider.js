@@ -15,11 +15,10 @@ function handleUserResponse(response) {
   return Promise.resolve(response);
 }
 
-// TODO: We will need the password later
-function register({ email, name }) {
-  return mockRequest("/register", true, { email, name }).then(
-    handleUserResponse
-  );
+function register({ email, name, password }) {
+  return request("users", {
+    body: { email, name, password },
+  }).then(handleUserResponse);
 }
 
 function login({ email, password }) {
