@@ -57,7 +57,7 @@ function Login() {
           Entrar
         </Button>
         {isLoading ? <Loading /> : null}
-        {isError ? <p>{error.message}</p> : null}
+        {isError ? <p style={{ color: "red" }}>{error.message}</p> : null}
       </form>
     </div>
   );
