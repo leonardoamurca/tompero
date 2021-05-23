@@ -28,8 +28,15 @@ function login({ email, password }) {
 }
 
 async function logout() {
-  window.localStorage.removeItem(accessTokenKey);
-  // TODO: Update database token to null
+  return request("users/logout", { method: "POST" }).then((res) => {
+    // TODO: Prevent redirect when has a failure
+    if (res.error) {
+      return Promise.reject({ message: res.error });
+    }
+
+    window.localStorage.removeItem(accessTokenKey);
+    return Promise.resolve(res);
+  });
 }
 
 export { getToken, register, login, logout };
