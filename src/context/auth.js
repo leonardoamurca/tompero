@@ -7,10 +7,10 @@ import * as auth from "../auth-provider.js";
 async function bootstrapAppData() {
   let user = null;
 
-  const token = await auth.getToken();
+  const token = auth.getToken();
   if (token) {
-    const data = await mockRequest("/bootstrap", true);
-    user = data.user;
+    const data = await auth.fetchUser(token);
+    user = data;
   }
   return user;
 }
@@ -51,9 +51,11 @@ function AuthProvider({ children }) {
 
   const isLoggedIn = () => user !== null;
 
+  const getUser = () => user;
+
   const value = React.useMemo(
-    () => ({ user, login, logout, register, isLoggedIn }),
-    [login, logout, register, user]
+    () => ({ getUser, login, logout, register, isLoggedIn }),
+    [login, logout, register, getUser]
   );
 
   if (isLoading || isIdle) {

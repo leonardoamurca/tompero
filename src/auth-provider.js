@@ -39,4 +39,22 @@ async function logout() {
   });
 }
 
-export { getToken, register, login, logout };
+function fetchUser(token) {
+  if (!token) {
+    return Promise.resolve(null);
+  }
+
+  return request("users/me", { method: "POST" })
+    .then((res) => {
+      if (res.error) {
+        window.localStorage.removeItem(accessTokenKey);
+        window.location.reload();
+        // TODO: Handle error globally with a modal or something else
+      }
+    })
+    .catch((err) => {
+      logout();
+    });
+}
+
+export { getToken, register, login, logout, fetchUser };

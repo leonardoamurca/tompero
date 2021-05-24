@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     maxWidth: 345,
     marginTop: 25,
     height: 333,
+    width: 333,
   },
   media: {
     height: 140,
@@ -30,11 +31,11 @@ const RecipeCard = ({ recipe }) => {
           <CardMedia
             className={classes.media}
             image={recipe.picture}
-            title={recipe.title}
+            title={recipe.name}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {recipe.title}
+              {recipe.name}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               {recipe.description}
